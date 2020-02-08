@@ -70,8 +70,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
       _createClass(NgxNotyService, [{
         key: "show",
-        value: function show() {
-          var noty = new noty__WEBPACK_IMPORTED_MODULE_1___default.a({});
+        value: function show(options) {
+          var noty = new noty__WEBPACK_IMPORTED_MODULE_1___default.a(options);
           noty.show();
         }
       }]);
@@ -270,17 +270,57 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     });
 
     function View_AppComponent_0(_l) {
-      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
+      return _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵvid"](0, [(_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](0, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["This is demo site for ngx-noty"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](2, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](3, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
         var ad = true;
         var _co = _v.component;
 
         if ("click" === en) {
-          var pd_0 = _co.popup() !== false;
+          var pd_0 = _co.alert() !== false;
           ad = pd_0 && ad;
         }
 
         return ad;
-      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Popup"]))], null, null);
+      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Alert"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](5, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](6, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
+        var ad = true;
+        var _co = _v.component;
+
+        if ("click" === en) {
+          var pd_0 = _co.success() !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Success"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](8, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](9, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
+        var ad = true;
+        var _co = _v.component;
+
+        if ("click" === en) {
+          var pd_0 = _co.warning() !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Warning"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](11, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](12, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
+        var ad = true;
+        var _co = _v.component;
+
+        if ("click" === en) {
+          var pd_0 = _co.error() !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Error"])), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](14, 0, null, null, 2, "div", [], null, null, null, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵeld"](15, 0, null, null, 1, "button", [], null, [[null, "click"]], function (_v, en, $event) {
+        var ad = true;
+        var _co = _v.component;
+
+        if ("click" === en) {
+          var pd_0 = _co.info() !== false;
+          ad = pd_0 && ad;
+        }
+
+        return ad;
+      }, null, null)), (_l()(), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵted"](-1, null, ["Info"]))], null, null);
     }
 
     function View_AppComponent_Host_0(_l) {
@@ -322,9 +362,44 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }
 
       _createClass(AppComponent, [{
-        key: "popup",
-        value: function popup() {
-          this.ngxNotyService.show();
+        key: "alert",
+        value: function alert() {
+          this.ngxNotyService.show({
+            text: "Best check yo self, you're not looking too good.",
+            type: 'alert'
+          });
+        }
+      }, {
+        key: "success",
+        value: function success() {
+          this.ngxNotyService.show({
+            text: "You successfully read this important alert message.",
+            type: 'success'
+          });
+        }
+      }, {
+        key: "warning",
+        value: function warning() {
+          this.ngxNotyService.show({
+            text: "Best check yo self, you're not looking too good.",
+            type: 'warning'
+          });
+        }
+      }, {
+        key: "error",
+        value: function error() {
+          this.ngxNotyService.show({
+            text: "Change a few things up and try submitting again.",
+            type: 'error'
+          });
+        }
+      }, {
+        key: "info",
+        value: function info() {
+          this.ngxNotyService.show({
+            text: "This alert needs your attention, but it's not super important.",
+            type: 'info'
+          });
         }
       }]);
 
