@@ -17,7 +17,7 @@ this.ngxNotyService.show({
 });
 ```
 
-Import styles using `angular.json`.
+Import styles using `angular.json`.  
 See https://ned.im/noty/#/themes for options.
 
 ```json
