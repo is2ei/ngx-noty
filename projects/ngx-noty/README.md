@@ -20,7 +20,6 @@ this.ngxNotyService.show({
 See: https://ned.im/noty/#/themes
 
 ```json
-// angular.json
 {
   "styles": [
     "node_modules/noty/lib/noty.css",
