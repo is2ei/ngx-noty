@@ -17,7 +17,8 @@ this.ngxNotyService.show({
 });
 ```
 
-See: https://ned.im/noty/#/themes
+Import styles using `angular.json`
+See: https://ned.im/noty/#/themes for options.
 
 ```json
 {
