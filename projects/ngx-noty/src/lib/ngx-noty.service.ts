@@ -1,3 +1,5 @@
+import Noty from 'noty';
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +7,8 @@ import { Injectable } from '@angular/core';
 })
 export class NgxNotyService {
 
-  constructor() { }
+  show(options: Noty.Options): void {
+    new Noty(options).show();
+  }
+
 }

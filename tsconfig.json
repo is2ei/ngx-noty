@@ -23,7 +23,8 @@
         "dist/ngx-noty/ngx-noty",
         "dist/ngx-noty"
       ]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
