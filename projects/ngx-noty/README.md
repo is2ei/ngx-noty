@@ -17,10 +17,10 @@ this.ngxNotyService.show({
 });
 ```
 
+See: https://ned.im/noty/#/themes
+
 ```json
 // angular.json
-// Replace `THEME_NAME` with theme name you'd like to use.
-// See: https://ned.im/noty/#/themes
 {
   "styles": [
     "node_modules/noty/lib/noty.css",
