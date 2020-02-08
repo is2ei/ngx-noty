@@ -1,24 +1,30 @@
 # NgxNoty
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
+Angular wrapper around Noty
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name --project ngx-noty` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-noty`.
-> Note: Don't forget to add `--project ngx-noty` or else it will be added to the default project in your `angular.json` file. 
+```typescript
+// app.module.ts
+import { NgxNotyModule } from 'ngx-noty';
+```
 
-## Build
+```typescript
+// app.component.ts
+this.ngxNotyService.show({
+  text: `Best check yo self, you're not looking too good.`,
+  type: 'alert'
+});
+```
 
-Run `ng build ngx-noty` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ngx-noty`, go to the dist folder `cd dist/ngx-noty` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngx-noty` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```json
+// angular.json
+// Replace `THEME_NAME` with theme name you'd like to use.
+// See: https://ned.im/noty/#/themes
+{
+  "styles": [
+    "node_modules/noty/lib/noty.css",
+    "node_modules/noty/lib/themes/{THEME_NAME}.css"
+  ]
+}
+```
